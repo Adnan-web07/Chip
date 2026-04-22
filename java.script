@@ -1,0 +1,3 @@
+function makeTextBiggerPX() {
+    document.body.style.fontSize = "50px";
+}

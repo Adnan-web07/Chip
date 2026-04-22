@@ -3,28 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>THEBESTWEBEVER.com</title>
 </head>
 <body>
+    <header>
+        <h1 id="main-title">THE BEST WEB EVER: LEARN TO CODE</h1>
+    </header>
 
-    <h1>Tutorials ya wanna learn ya gotta stay then lil bro</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">HTML 101</a></li>
+            <li><a href="css-tutorial.html">CSS Magic</a></li>
+            <li><a href="js-tutorial.html">JavaScript Logic</a></li>
+        </ul>
+    </nav>
 
-     <p> ya wanna learn about web development? </p>
+    <main> 
+        <article>
+            <h2>ALRIGHT, LET'S BEGIN!</h2>
+            <p>You stumbled here into the deep web, but worry not, web surfer! This page is your 101 guide to learning web development. Soon, you'll be building awesome sites just like me!</p>
+            <p>I'm not going to bore you with endless logic right now. You learn best by doing, building, and using your creativity!</p>
+            
+            <h3>The Building Blocks: Tags</h3>
+            <p>Web pages are built using HTML tags, like the paragraph tag, heading tags, and semantic tags that give your page structure. Some tags are just for text, while others let you build cool things like this numbered list:</p>
+            
+            <ol>
+                <li>Roses are red</li>
+                <li>Violets are blue</li>
+                <li>HTML is awesome</li>
+                <li>And so are you!</li>
+            </ol>
 
-     <p> it should look like this; <img src="html-file.png" alt="HTML File Example"></p>
-     
-    <div>
-    
-    <p> the funny thing is that you dont need to even know how to code </p>
-    <p> just follow the steps and you'll be fine or whatever </p>
-    <p>step 1: Create an HTML file</p>
-    <p>step 2: Add the basic structure of an HTML document</p>
-    <p>step 3: Add a title to your document</p>
-    <p>step 4: Add a heading to your document</p>
-    <p>step 5: Add a paragraph to your document</p>
-    and there you have it, your first HTML document! You can open it in a web browser to see how it looks. From here, you can start exploring more HTML tags and attributes to enhance your webpage. Happy coding!
-    
-    </div>
-    
+            <p>You can even organize data using tables. Check out this semantic table below:</p>
+
+                <table>
+                    <caption>Semantic Table Booyah!</caption>
+                    <thead>
+                        <tr>
+                            <th>TERM</th>
+                            <th>DEFINITION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>The skeleton of the web</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>The styling and colors</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Difficulty</td>
+                            <td>Easy Peasy</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <section id="js-tutorial" class="interactive-box">
+                    <h3>Interactive Font Size Changer!</h3>
+                    <p>Let's see JavaScript in action! Click the buttons below to change the size of the text inside this box using different CSS units.</p>
+                    
+                    <button onclick="makeTextBiggerPX()">Bigger (using PX)</button>
+                    <button onclick="makeTextBiggerREM()">Bigger (using REM)</button>
+                    <button onclick="resetTextSize()">Reset to Original</button>
+                    
+                    <div id="demo-text">
+                        <p>Watch this text grow! Pixels (px) are fixed sizes, but REM scales based on the root size of the document.</p>
+                    </div>
+                </section>
+        </article>
+
+        <section id="quiz-section">
+            <h2>Time for a Pop Quiz!</h2>
+            <p>Which HTML tag is used to create a numbered list?</p>
+            
+            <button class="quiz-btn" onclick="checkAnswer(false, this)">ul</button>
+            <button class="quiz-btn" onclick="checkAnswer(true, this)">ol</button>
+            <button class="quiz-btn" onclick="checkAnswer(false, this)">li</button>
+            
+            <p id="quiz-feedback"></p>
+            
+            <a href="css-tutorial.html" id="next-chapter-btn" style="display: none;">
+                <button>Correct! Proceed to CSS Chapter</button>
+            </a>
+        </section>
+
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFz5fYgrepcP696Zm4ZtlldGLC6hEr83HUhDcUWJoyK2l-Rqp2YrkMskunDA_R5Hy-722xpQrOgG2-ZhAuOhuQ1aBRtwaf4jp3tfRNlNQKmg&s=10" alt="A cute cat looking like a web developer">
+            <figcaption>Photo by me, because I'm awesome</figcaption>
+        </figure>
+
+        <aside class="adbox">
+            <h3>Sponsors</h3>
+            <p>Här ska vi lägga snälla saker!</p>
+            <p>This is way too empty, we need to add more content here later.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Created for my Slutprojekt Webbutveckling. Random stuff go!</p>
+    </footer>
 </body>
 </html>
