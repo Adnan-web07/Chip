@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+
+header { 
+    grid-area: header; 
+    background-color: #1a1a1a; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+nav { 
+    grid-area: nav; 
+    background-color: #333; 
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+/* LoVe Focus HAte ordning för länkar */
+nav ul li a:link { 
+    color: hsl(0, 0%, 90%); 
+    text-decoration: none; 
+    padding: 15px 20px; 
+    display: inline-block; 
+}
+nav ul li a:visited { 
+    color: hsl(0, 0%, 70%); 
+}
+nav ul li a:focus { 
+    background-color: #555; 
+    outline: 2px solid lime; 
+}
+nav ul li a:hover { 
+    background-color: #444; 
+    color: white; 
+}
+nav ul li a:active { 
+    background-color: hsl(0, 100%, 40%); 
+}
+
+main { 
+    grid-area: main; 
+    padding: 20px; 
+    max-width: 960px; 
+    margin: 0 auto; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+/* Zebra-striping */
+tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+}
+
+input:required {
+    border-left: 4px solid red;
+}
+
+input:focus {
+    background-color: lightyellow;
+}
+
+form + p {
+    font-style: italic;
+    color: #555;
+}
+
+footer { 
+    grid-area: footer; 
+    background-color: #1a1a1a; 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+}
+
+/* Darkweb och felsidor */
+.red { 
+    background-color: red; 
+}
+
+.wrongh1 {
+    margin-top: 30px;
+    color: beige;
+}
+
+.secretbox { 
+    background: white; 
+    padding: 20px; 
+    margin-top: 40px;
+    border: 2px dashed black; 
+}
+
+.darkmode { 
+    background-color: #0b0b0b; 
+    color: #00ff00; 
+    font-family: monospace; 
+}
+
+.terminal { 
+    margin-top: 50px; 
+    border: 2px solid lime; 
+    padding: 30px; 
+}
+
+.runaway { 
+    color: red; 
+}
+.runaway:hover { 
+    color: white; 
+    background-color: red; 
+}
