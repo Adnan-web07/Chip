@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.CSS">
+    <script src="script.js" defer></script>
+    <title>CSS Magic - Formulär och Design</title>
+</head>
+<body>
+
+    <header>
+        <h1>CSS Magic: Låt oss göra det snyggt!</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HTML 101</a></li>
+            <li><a href="css-tutorial.html">CSS Magic</a></li>
+            <li><a href="js-tutorial.html">JavaScript Logic</a></li>
+        </ul>
+    </nav>
+
+    <main> 
+        <article>
+            <h2>Att ge sidan liv</h2>
+            <p>HTML är skelettet, men CSS är huden och kläderna. Här förklarar jag hur färger och formulär fungerar i modern webbdesign.</p>
+
+            <h3>Färger på tre olika sätt</h3>
+            <p>I CSS kan man ange färger på flera olika sätt, vilket är ett krav för högre betyg:</p>
+            <ul>
+                <li><strong>Hexadecimalt:</strong> <code>#1a1a1a</code></li>
+                <li><strong>RGB/RGBA:</strong> <code>rgba(0, 0, 0, 0.05)</code></li>
+                <li><strong>HSL/HSLA:</strong> <code>hsl(0, 100%, 40%)</code></li>
+            </ul>
+        </article>
+
+        <section>
+            <h2>Betygsmatrisens Formulär-test</h2>
+            <p>Fyll i testformuläret nedan för att se hur CSS-selektorerna reagerar.</p>
+            
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Personlig info</legend>
+                    
+                    <label for="username">Användarnamn (Required):</label>
+                    <input type="text" id="username" name="username" placeholder="Skriv här..." required>
+
+                    <label for="useremail">E-post (Valideras):</label>
+                    <input type="email" id="useremail" name="useremail" required>
+
+                    <label for="userage">Ålder:</label>
+                    <input type="number" id="userage" name="userage" min="1" max="100">
+
+                    <label for="colorpicker">Välj din favoritfärg:</label>
+                    <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
+
+                    <label for="characterclass">Välj din klass:</label>
+                    <select id="characterclass" name="characterclass">
+                        <option value="barbarian">Barbarian</option>
+                        <option value="rogue">Rogue</option>
+                        <option value="wizard">Wizard</option>
+                    </select>
+                    
+                    <button type="submit">Skicka in data</button>
+                </fieldset>
+            </form>
+            <p>Det här stycket stajlas automatiskt av en CSS syskon-selektor.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for my Slutprojekt Webbutveckling. Random stuff go!</p>
+    </footer>
+    
+</body>
+</html>
