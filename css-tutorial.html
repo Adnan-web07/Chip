@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.CSS">
     <script src="script.js" defer></script>
-    <title>CSS Magic - Formulär och Design</title>
+    <title>CSS Magic</title>
 </head>
 <body>
-
     <header>
-        <h1>CSS Magic: Låt oss göra det snyggt!</h1>
+        <h1>CSS Magic: Färger och Layout</h1>
     </header>
 
     <nav>
@@ -24,54 +23,23 @@
     <main> 
         <article>
             <h2>Att ge sidan liv</h2>
-            <p>HTML är skelettet, men CSS är huden och kläderna. Här förklarar jag hur färger och formulär fungerar i modern webbdesign.</p>
+            <p>HTML är skelettet, men CSS är huden och kläderna. Här lär vi oss hur färg och struktur fungerar på en webbplats.</p>
 
-            <h3>Färger på tre olika sätt</h3>
-            <p>I CSS kan man ange färger på flera olika sätt, vilket är ett krav för högre betyg:</p>
+            <h3>Färger på tre sätt</h3>
+            <p>I CSS kan vi ange färgkoder på olika sätt beroende på vad som passar bäst:</p>
             <ul>
-                <li><strong>Hexadecimalt:</strong> <code>#1a1a1a</code></li>
-                <li><strong>RGB/RGBA:</strong> <code>rgba(0, 0, 0, 0.05)</code></li>
-                <li><strong>HSL/HSLA:</strong> <code>hsl(0, 100%, 40%)</code></li>
+                <li>Hexadecimalt: #1a1a1a</li>
+                <li>RGB: rgb(255, 0, 0)</li>
+                <li>HSL: hsl(120, 100%, 25%)</li>
             </ul>
+
+            <h3>Layout med Grid</h3>
+            <p>Med CSS Grid delar vi upp hemsidan i zoner. Den här sidan använder grid för att placera header, meny, main och footer på rätt plats.</p>
         </article>
-
-        <section>
-            <h2>Betygsmatrisens Formulär-test</h2>
-            <p>Fyll i testformuläret nedan för att se hur CSS-selektorerna reagerar.</p>
-            
-            <form action="#" method="POST">
-                <fieldset>
-                    <legend>Personlig info</legend>
-                    
-                    <label for="username">Användarnamn (Required):</label>
-                    <input type="text" id="username" name="username" placeholder="Skriv här..." required>
-
-                    <label for="useremail">E-post (Valideras):</label>
-                    <input type="email" id="useremail" name="useremail" required>
-
-                    <label for="userage">Ålder:</label>
-                    <input type="number" id="userage" name="userage" min="1" max="100">
-
-                    <label for="colorpicker">Välj din favoritfärg:</label>
-                    <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
-
-                    <label for="characterclass">Välj din klass:</label>
-                    <select id="characterclass" name="characterclass">
-                        <option value="barbarian">Barbarian</option>
-                        <option value="rogue">Rogue</option>
-                        <option value="wizard">Wizard</option>
-                    </select>
-                    
-                    <button type="submit">Skicka in data</button>
-                </fieldset>
-            </form>
-            <p>Det här stycket stajlas automatiskt av en CSS syskon-selektor.</p>
-        </section>
     </main>
 
     <footer>
         <p>Created for my Slutprojekt Webbutveckling. Random stuff go!</p>
     </footer>
-    
 </body>
 </html>

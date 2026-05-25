@@ -159,3 +159,11 @@ footer {
     color: white; 
     background-color: red; 
 }
+
+#gameitem {
+    background-color: #eee;
+    padding: 20px;
+    margin: 15px 0;
+    border: 2px solid #333;
+    width: 300px;
+}
