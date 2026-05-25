@@ -13,3 +13,19 @@ function checkSecretCode() {
         messageBox.style.color = "darkred";
     }
 }
+
+function openChest() {
+    let status = document.getElementById("itemstatus");
+    let box = document.getElementById("gameitem");
+    status.innerHTML = "Föremål: Öppen kista! Du hittade ett legendariskt svärd.";
+    box.style.backgroundColor = "#d4edda";
+    box.style.borderColor = "green";
+}
+
+function resetChest() {
+    let status = document.getElementById("itemstatus");
+    let box = document.getElementById("gameitem");
+    status.innerHTML = "Föremål: Stängd kista";
+    box.style.backgroundColor = "#eee";
+    box.style.borderColor = "#333";
+}
