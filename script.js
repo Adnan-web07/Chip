@@ -1,3 +1,6 @@
+// Variabel som håller koll på hur många gånger användaren skrivit fel lösenord
+let failCount = 0;
+
 function makeTextBiggerPX() {
     document.body.style.fontSize = "50px";
 }
@@ -5,12 +8,29 @@ function makeTextBiggerPX() {
 function checkSecretCode() {
     let userGuess = document.getElementById("secretinput").value;
     let messageBox = document.getElementById("errortext");
+    let hintBox = document.getElementById("hintbox");
 
     if (userGuess == "root") {
         window.location.href = "darkweb.html";
     } else {
-        messageBox.innerHTML = "ERROR: Wrong passcode. Try again!";
+        // Öka räknaren med 1 vid varje felaktig gissning
+        failCount = failCount + 1;
+        
+        messageBox.innerHTML = "ERROR: Fel kodord. Försök igen.";
         messageBox.style.color = "darkred";
+        
+        // Logik som låser upp delar av ledtråden varje gång man misslyckas
+        hintBox.style.display = "block";
+        
+        if (failCount == 1) {
+            hintBox.innerHTML = "Ledtråd 1: Koden består av 4 bokstäver.";
+        } 
+        else if (failCount == 2) {
+            hintBox.innerHTML = "Ledtråd 2: Första bokstaven i ordet är r.";
+        } 
+        else if (failCount >= 3) {
+            hintBox.innerHTML = "Systemet gav upp! Kodordet är: root";
+        }
     }
 }
 
@@ -18,7 +38,7 @@ function openChest() {
     let status = document.getElementById("itemstatus");
     let box = document.getElementById("gameitem");
     status.innerHTML = "Föremål: Öppen kista! Du hittade ett legendariskt svärd.";
-    box.style.backgroundColor = "#d4edda";
+    box.style.backgroundColor = "#e0ffe0";
     box.style.borderColor = "green";
 }
 
@@ -26,6 +46,6 @@ function resetChest() {
     let status = document.getElementById("itemstatus");
     let box = document.getElementById("gameitem");
     status.innerHTML = "Föremål: Stängd kista";
-    box.style.backgroundColor = "#eee";
-    box.style.borderColor = "#333";
+    box.style.backgroundColor = "#fff";
+    box.style.borderColor = "#222";
 }
