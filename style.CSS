@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     display: grid;
     grid-template-columns: 1fr;
@@ -15,15 +15,15 @@ body {
 
 header { 
     grid-area: header; 
-    background-color: #1a1a1a; 
+    background-color: #111; 
     color: white; 
-    padding: 20px; 
+    padding: 15px; 
     text-align: center; 
 }
 
 nav { 
     grid-area: nav; 
-    background-color: #333; 
+    background-color: #222; 
 }
 
 nav ul {
@@ -36,22 +36,21 @@ nav ul li {
     display: inline-block;
 }
 
-/* LoVe Focus HAte ordning för länkar */
 nav ul li a:link { 
     color: hsl(0, 0%, 90%); 
     text-decoration: none; 
-    padding: 15px 20px; 
+    padding: 12px 18px; 
     display: inline-block; 
 }
 nav ul li a:visited { 
     color: hsl(0, 0%, 70%); 
 }
 nav ul li a:focus { 
-    background-color: #555; 
+    background-color: #444; 
     outline: 2px solid lime; 
 }
 nav ul li a:hover { 
-    background-color: #444; 
+    background-color: #333; 
     color: white; 
 }
 nav ul li a:active { 
@@ -61,8 +60,16 @@ nav ul li a:active {
 main { 
     grid-area: main; 
     padding: 20px; 
-    max-width: 960px; 
+    max-width: 800px; 
     margin: 0 auto; 
+}
+
+.homeimage {
+    max-width: 100%;
+    height: auto;
+    width: 250px;
+    border: 3px solid #333;
+    margin: 15px 0;
 }
 
 table {
@@ -76,84 +83,69 @@ table, th, td {
 }
 
 th, td {
-    padding: 10px;
-}
-
-th {
-    background-color: #333;
-    color: white;
-}
-
-/* Zebra-striping */
-tbody tr:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-form {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-}
-
-input, select {
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
     padding: 8px;
 }
 
-input:required {
-    border-left: 4px solid red;
+th {
+    background-color: #222;
+    color: white;
 }
 
-input:focus {
-    background-color: lightyellow;
-}
-
-form + p {
-    font-style: italic;
-    color: #555;
+tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.04);
 }
 
 footer { 
     grid-area: footer; 
-    background-color: #1a1a1a; 
+    background-color: #111; 
     color: white; 
     text-align: center; 
     padding: 10px; 
 }
 
-/* Darkweb och felsidor */
 .red { 
-    background-color: red; 
+    background-color: #700; 
 }
 
 .wrongh1 {
-    margin-top: 30px;
-    color: beige;
+    margin-top: 40px;
+    color: white;
+    text-align: center;
 }
 
 .secretbox { 
     background: white; 
     padding: 20px; 
-    margin-top: 40px;
-    border: 2px dashed black; 
+    margin: 30px auto;
+    border: 3px dashed black; 
+    width: 320px;
+}
+
+#hintbox {
+    margin-top: 15px;
+    background-color: #fff3cd;
+    padding: 10px;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    font-weight: bold;
 }
 
 .darkmode { 
-    background-color: #0b0b0b; 
-    color: #00ff00; 
+    background-color: #050505 !important; 
+    color: #00ff00 !important; 
     font-family: monospace; 
 }
 
 .terminal { 
-    margin-top: 50px; 
+    margin: 40px auto; 
     border: 2px solid lime; 
-    padding: 30px; 
+    padding: 25px; 
+    background-color: #000;
 }
 
 .runaway { 
     color: red; 
+    text-decoration: underline;
 }
 .runaway:hover { 
     color: white; 
@@ -161,9 +153,9 @@ footer {
 }
 
 #gameitem {
-    background-color: #eee;
-    padding: 20px;
+    background-color: #fff;
+    padding: 15px;
     margin: 15px 0;
-    border: 2px solid #333;
-    width: 300px;
+    border: 2px solid #222;
+    width: 280px;
 }
