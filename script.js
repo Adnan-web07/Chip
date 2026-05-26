@@ -29,7 +29,7 @@ function checkSecretCode() {
             hintBox.innerHTML = "Ledtråd 2: Första bokstaven i ordet är r.";
         } 
         else if (failCount >= 3) {
-            hintBox.innerHTML = "Systemet gav upp! Kodordet är: root";
+            hintBox.innerHTML = "Systemet gav upp av dig! Kodordet är: root";
         }
     }
 }
@@ -48,4 +48,22 @@ function resetChest() {
     status.innerHTML = "Föremål: Stängd kista";
     box.style.backgroundColor = "#fff";
     box.style.borderColor = "#222";
+}
+
+function createHero() {
+    // 1. Hämta vad användaren skrev i textrutan
+    let nameInput = document.getElementById("playername").value;
+    
+    // 2. Hämta p-taggen där resultatet ska visas
+    let resultParagraph = document.getElementById("previewtext");
+    
+    // 3. Kolla om användaren glömde skriva något
+    if (nameInput == "") {
+        resultParagraph.innerHTML = "Fel: Du måste skriva ett namn först!";
+        resultParagraph.style.color = "red";
+    } else {
+        // Om allt stämmer, slå ihop texten med namnet
+        resultParagraph.innerHTML = "Hjälten " + nameInput + " har vaknat till liv i databasen!";
+        resultParagraph.style.color = "black";
+    }
 }

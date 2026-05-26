@@ -35,6 +35,22 @@
             <button onclick="openChest()">Öppna kistan</button>
             <button onclick="resetChest()">Stäng kistan</button>
         </article>
+
+        <section>
+            <h2>Lär dig hur JavaScript läser formulär</h2>
+            <p>I HTML skapar vi bara inmatningsfält, men med JavaScript kan vi hämta vad användaren skriver i realtid och ändra innehållet på sidan live.</p>
+            
+            <form id="jsform" onsubmit="return false;">
+                <label for="playername">Namnge din hjälte:</label>
+                <input type="text" id="playername" placeholder="Skriv ett namn...">
+                
+                <button onclick="createHero()">Skapa karaktär</button>
+            </form>
+            
+            <div id="previewbox">
+                <p id="previewtext">Ingen karaktär skapad än...</p>
+            </div>
+        </section>
     </main>
 
     <footer>
