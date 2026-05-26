@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wrong Answer</title>
+    <title>Fel Svar</title>
     <link rel="stylesheet" href="style.CSS">
     <script src="script.js" defer></script>
 </head>
 <body class="red">
-    <h1 class="wrongh1">Sorry to break your heart but... its <strong>wrong</strong>...</h1>
+    <h1 class="wrongh1">Tyvärr, det där blev fel svar...</h1>
 
     <div class="secretbox">
-        <p>Wait... there is a hidden door here. Do you know the passcode?</p>
-        <input type="text" id="secretinput" placeholder="Enter code">
-        <button onclick="checkSecretCode()">Unlock</button>
+        <h3>Ett dolt spår uppenbarar sig...</h3>
+        <p>Det verkar finnas en hemlig dörr här. Kan du lösenordet för att låsa upp den?</p>
+        
+        <input type="text" id="secretinput" placeholder="Skriv kodord här">
+        <button onclick="checkSecretCode()">Lås upp</button>
+        
         <p id="errortext"></p>
+        
+        <div id="hintbox" style="display: none;"></div>
     </div>
 
     <br>
-    <p><a href="index.html">Go back to start</a></p>
+    <p style="text-align: center;"><a href="index.html" style="color: white;">Försök med quizet igen</a></p>
 </body>
 </html>
