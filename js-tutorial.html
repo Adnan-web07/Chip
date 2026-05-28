@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.CSS">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>JavaScript Logic</title>
 </head>
@@ -21,7 +21,15 @@
     </nav>
 
     <main>
-        <article>
+        <aside class="localmenu">
+            <h3>JS Kapitel</h3>
+            <ul>
+                <li><a href="#interaktiv-sektion">1. Skattkistan</a></li>
+                <li><a href="#form-sektion">2. Skapa hjälte</a></li>
+            </ul>
+        </aside>
+
+        <article id="interaktivsektion">
             <h2>Webbplatsens dynamik</h2>
             <p>Medan HTML bygger upp texten och CSS sätter färgerna, så tillför JavaScript beteende och programmeringslogik till sidan. Det gör att vi kan svara på när användaren klickar på knappar eller skriver i fält.</p>
 
@@ -35,6 +43,71 @@
             <button onclick="openChest()">Öppna kistan</button>
             <button onclick="resetChest()">Stäng kistan</button>
         </article>
+
+        <section id="formsektion">
+            <h2>Lär dig hur JavaScript läser formulär</h2>
+            <p>I HTML skapar vi bara inmatningsfält, men med JavaScript kan vi hämta vad användaren skriver i realtid och ändra innehållet på sidan live.</p>
+            
+            <form id="jsform" onsubmit="return false;">
+                <p>
+                    <label for="playername">Namnge din hjälte:</label>
+                    <input type="text" id="playername" placeholder="Skriv ett namn..." required>
+                </p>
+
+                <p>
+                    <label for="playerpass">Hemlig pinkod:</label>
+                    <input type="password" id="playerpass" placeholder="Lösenord...">
+                </p>
+
+                <p>
+                    <label for="playermail">Hjältens e-post:</label>
+                    <input type="email" id="playermail" placeholder="namn@mail.com">
+                </p>
+
+                <p>
+                    <label for="playerlevel">Startnivå (Nivå 1-50):</label>
+                    <input type="number" id="playerlevel" min="1" max="50" value="1">
+               </p>
+
+                <p>
+                    <label for="createdate">Skapad datum:</label>
+                    <input type="date" id="createdate">
+                </p>
+
+                <p>
+                    <label for="armorcolor">Färg på rustning:</label>
+                    <input type="color" id="armorcolor" value="#ff0000">
+                </p>
+
+                <p>
+                    <label for="difficulty">Svårighetsgrad:</label>
+                    <input type="range" id="difficulty" min="1" max="3">
+                </p>
+
+                <p>
+                    <label for="avatar">Ladda upp avatar (.png):</label>
+                    <input type="file" id="avatar">
+                </p>
+
+                <p>
+                    <input type="checkbox" id="hardcore">
+                    <label for="hardcore">Hardcore-läge (Permanent död)</label>
+                </p>
+
+             <p>
+                    <input type="radio" id="class1" name="hero-class" value="warrior" checked>
+                    <label for="class1">Krigare</label>
+                    <input type="radio" id="class2" name="hero-class" value="mage">
+                    <label for="class2">Magiker</label>
+            </p>
+                
+                <button onclick="createHero()">Skapa karaktär</button>
+            </form>
+            
+            <div id="previewbox">
+                <p id="previewtext">Ingen karaktär skapad än...</p>
+            </div>
+        </section>
     </main>
 
     <footer>
